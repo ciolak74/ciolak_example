@@ -84,6 +84,11 @@ app.get('/pagecount', function (req, res) {
     initDb(function(err){});
   }
   if (db) {
+    var query = { date: "*" };
+    db.collection('counts').find(query).toArray(function(err, result) {
+    if (err) throw err;
+    res.send(result);
+    });
       db.collection('counts').count(function(err, count ){
       res.send('{ Here is the PAGECount: ' + count + mongoPassword + ' ' + mongoUser + '}');
     });
