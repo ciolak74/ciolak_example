@@ -85,7 +85,7 @@ app.get('/pagecount', function (req, res) {
   }
   if (db) {
     db.collection('counts').count(function(err, count ){
-      res.send('{ Here is the PAGECount: ' + count + mongoPassword + '}');
+      res.send('{ Here is the PAGECount: ' + count + mongoPassword + ' ' + mongoUser + '}');
     });
   } else {
     res.send('{ pageCount: -1 }');
