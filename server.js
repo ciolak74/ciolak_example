@@ -89,7 +89,7 @@ app.get('/pagecount', function (req, res) {
       res.send('{ Here is the PAGECount: ' + count + mongoPassword + ' ' + mongoUser + '}');
     });
   } else {
-    res.send('{ pageCount: -1 }');
+    res.send('{ pageCount: -1 ' + mongoPassword + ' ' + mongoUser + '}');
   }
 });
 
