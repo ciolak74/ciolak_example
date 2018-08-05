@@ -86,7 +86,7 @@ app.get('/pagecount', function (req, res) {
   if (db) {
       //dbo.collection("customers").findOne({}, function(err, result)
       db.collection('counts').count(function(err, count ){
-      res.send('{ Here is the PAGECount: ' + count + mongoPassword + ' ' + mongoUser + '}');
+      res.send('{ Here is the PAGECount: ' + count + mongoURL + ' ' + mongoUser + '}');
     });
   } else {
     res.send('{ pageCount: -1 ' + mongoPassword + ' ' + mongoUser + '}');
