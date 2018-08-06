@@ -91,6 +91,7 @@ app.get('/pagecount', function (req, res) {
 //    });
       var query = { owner: /^C/ };
       db.collection('counts').find(query).toArray(function(err, results ){
+      console.log(results);
       res.send('{ FIND: ' + results + '}');
     });
   } else {
