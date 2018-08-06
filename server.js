@@ -90,8 +90,8 @@ app.get('/pagecount', function (req, res) {
     db.collection('counts').count(function(err, count ){
       res.send('{ !!???!pageCount: ' + count + '}');
     });
-    db.collection('counts').find(function(err, find ){
-      res.send('{ !!???!pageCount: ' + find + '}');
+    db.collection('counts').find({}, function(err, results ){
+      res.send('{ !!???!pageCount: ' + results + '}');
     });
   } else {
     res.send('{ !????!!pageCount: -1 }' + mongoURL );
