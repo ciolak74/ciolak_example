@@ -95,6 +95,16 @@ app.get('/pagecount', function (req, res) {
   } else {
     res.send('{ ERR_pageCount: -1 }' + mongoURL );
   }
+  if (db) {
+ //   db.collection('counts').count(function(err, count ){
+   //   res.send('{ PAGECOUNT: ' + count + '}');
+  //  });
+    db.collection('counts').findOne({}, function(err, results ){
+    res.send('{ FIND: ' + results + '}');
+   });
+  } else {
+    res.send('{ ERR_pageCount: -1 }' + mongoURL );
+  }
 });
 
 // error handling
