@@ -31,7 +31,7 @@ if (mongoURL =! null) {
     // Provide UI label that excludes user id and pw
     mongoURLLabel += mongoHost + ':' + mongoPort + '/' + mongoDatabase;
     mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase;
-    console.log('MONGO URL1: ', mongoURL + ' ' + mongoUser + ' ' + mongoPassword + ' ' + mongoDatabase + ' ' + mongoHost + ' ' + mongoPort);
+    //console.log('MONGO URL2: ', mongoURL + ' ' + mongoUser + ' ' + mongoPassword + ' ' + mongoDatabase + ' ' + mongoHost + ' ' + mongoPort);
    }
 }
 var db = null,
