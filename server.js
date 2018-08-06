@@ -89,7 +89,7 @@ app.get('/pagecount', function (req, res) {
 //    db.collection('counts').count(function(err, count ){
 //      res.send('{ PAGECOUNT: ' + count + '}');
 //    });
-      var query = { address: /^S/ };
+      var query = { owner: /^C/ };
       db.collection('counts').find(query).toArray(function(err, results ){
       res.send('{ FIND: ' + results + '}');
     });
