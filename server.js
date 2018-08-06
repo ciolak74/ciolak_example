@@ -32,8 +32,8 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
     // Provide UI label that excludes user id and pw
     mongoURLLabel += mongoHost + ':' + mongoPort + '/' + mongoDatabase;
     mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase;
-    console.log('MONGO URL: ', mongoURL);
-  }
+    console.log('MONGO URL1: ', mongoURL + ' ' + mongoUser + ' ' + mongoPassword + ' ' + mongoDatabase + ' ' + mongoHost + ' ' + mongoPort);
+   }
 }
 var db = null,
     dbDetails = new Object();
