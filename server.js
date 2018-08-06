@@ -21,7 +21,7 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
       mongoDatabase = process.env['MONGODB' + '_DATABASE'],
       mongoPassword = process.env['MONGODB' + '_PASSWORD'],
       mongoUser = process.env['MONGODB' + '_USER'];
-    console.log('MONGO URL: ', mongoURL);
+      console.log('MONGO URL1: ', mongoURL + ' ' + mongoUser + ' ' + mongoPassword + ' ' + mongoDatabase + ' ' + mongoHost + ' ' + mongoPort);
 
 
   if (mongoHost && mongoPort && mongoDatabase) {
