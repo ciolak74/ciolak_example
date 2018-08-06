@@ -68,7 +68,7 @@ app.get('/', function (req, res) {
   if (db) {
     var col = db.collection('counts');
     // Create a document with request IP and current time of request
-    col.insert({ip: req.ip, date: Date.now()});
+    col.insert({ip: req.ip, date: Date.now(), owner: 'Ciolak'});
     col.count(function(err, count){
       if (err) {
         console.log('Error running count. Message:\n'+err);
@@ -89,6 +89,9 @@ app.get('/pagecount', function (req, res) {
   if (db) {
     db.collection('counts').count(function(err, count ){
       res.send('{ !!???!pageCount: ' + count + '}');
+    });
+    db.collection('counts').find(function(err, find ){
+      res.send('{ !!???!pageCount: ' + find + '}');
     });
   } else {
     res.send('{ !????!!pageCount: -1 }' + mongoURL );
