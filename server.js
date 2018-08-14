@@ -87,12 +87,12 @@ app.get('/pagecount', function (req, res) {
   }
   if (db) {
 //    db.collection('counts').count(function(err, count ){
-//      res.send('{ PAGECOUNT: ' + count + '}');
+//      res.send('{ Giuseppe_PAGECOUNT: ' + count + '}');
 //    });
       var query = { owner: /^C/ };
       db.collection('counts').find(query).toArray(function(err, results ){
       console.log(results);
-      res.send('{ FIND: ' + results + '}');
+      res.send('{ GIUSEPPE_FIND: ' + results + '}');
     });
   } else {
     res.send('{ ERR_pageCount: -1 }' + mongoURL );
