@@ -94,7 +94,7 @@ app.get('/pagecount', function (req, res) {
      //console.log(results);
       //res.send('{ DEMO_CUSTOMER_FIND: ' + results + '}');
       db.collection('counts').count(function(err, count ){
-      res.send('{ Giuseppe_PAGECOUNT: ' + count + '}');
+      res.send('{ DEMO_CUSTOMER_Query_PAGECOUNT: ' + count + '}');
     });
   } else {
     res.send('{ ERR_pageCount: -1 }' + mongoURL );
