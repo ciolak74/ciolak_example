@@ -89,10 +89,12 @@ app.get('/pagecount', function (req, res) {
 //    db.collection('counts').count(function(err, count ){
 //      res.send('{ Giuseppe_PAGECOUNT: ' + count + '}');
 //    });
-      var query = { owner: /^C/ };
-      db.collection('counts').find(query).toArray(function(err, results ){
-      console.log(results);
-      res.send('{ GIUSEPPE_FIND: ' + results + '}');
+     // var query = { owner: /^C/ };
+     // db.collection('counts').find(query).toArray(function(err, results ){
+     //console.log(results);
+      //res.send('{ DEMO_CUSTOMER_FIND: ' + results + '}');
+      db.collection('counts').count(function(err, count ){
+      res.send('{ Giuseppe_PAGECOUNT: ' + count + '}');
     });
   } else {
     res.send('{ ERR_pageCount: -1 }' + mongoURL );
