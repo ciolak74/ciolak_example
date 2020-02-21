@@ -93,8 +93,8 @@ app.get('/pagecount', function (req, res) {
      // db.collection('counts').find(query).toArray(function(err, results ){
       //res.send('{ DEMO_CUSTOMER_FIND: ' + results + '}');
       db.collection('counts').count(function(err, count ){
-      console.log('{ DEMO_RUDY_PAGECOUNT: ' + count + '}');
-      res.send('{ DEMO_RUDY_PAGECOUNT: ' + count + '}');
+      console.log('{ DEMO_________PAGECOUNT: ' + count + '}');
+      res.send('{ DEMO_________PAGECOUNT: ' + count + '}');
     });
   } else {
     res.send('{ ERR_pageCount: -1 }' + mongoURL );
